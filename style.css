@@ -1,0 +1,219 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    mask-image: url('vecteezy_grunge-noise-ink-transition-4k-animation_36786167-ezgif.com-loop-count.gif');
+    mask-position: center;
+    mask-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.element-01
+{
+    height: 15rem;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+}
+
+.element-01 section
+{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow:
+    0 0 0.3rem black,
+    0 0 0.3rem black,
+    0 0 0.3rem black,
+    0 0 0.6rem deepskyblue,
+    0 0 0.6rem deepskyblue,
+    0 0 0.6rem deepskyblue;
+}
+
+.element-01 .element-01-01
+{
+    border: none;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    transform: translateX(3.75rem) translateY(-7.5rem);
+    animation: outer_ball_jump 5s linear infinite both;
+}
+
+.element-01 .element-01-02
+{
+    border: none;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+    transform: translateX(3.75rem) translateY(7.5rem);
+    animation: inner_ball_jump 5s linear infinite both;
+}
+
+.element-01 .element-01-03
+{
+    transform: translateZ(7.5rem);
+}
+
+.element-01 .element-01-04
+{
+    transform: rotateY(180deg) translateZ(7.5rem);
+}
+
+.element-01 .element-01-05
+{
+    transform: rotateY(-90deg) translateZ(7.5rem);
+}
+
+.element-01 .element-01-06
+{
+    transform: rotateY(90deg) translateZ(7.5rem);
+}
+
+.element-01 .element-01-07
+{
+    transform: rotateX(90deg) translateZ(7.5rem);
+    animation: bend_top 5s linear infinite both;
+}
+
+.element-01 .element-01-08
+{
+    transform: rotateX(-90deg) translateZ(7.5rem);
+    animation: bend_bottom 5s linear infinite both;
+}
+
+@keyframes outer_ball_jump
+{
+    10%
+    {
+        transform: translateX(3.75rem) translateY(-11.25rem);
+    }
+
+    15%
+    {
+        transform: translateX(3.75rem) translateY(-7.5rem);
+    }
+
+    20%
+    {
+        transform: translateX(3.75rem) translateY(-3.75rem);
+    }
+
+    40%
+    {
+        transform: translateX(3.75rem) translateY(-7.5rem);
+    }
+
+    70%
+    {
+        transform: translateX(3.75rem) translateY(-15rem);
+    }
+
+    90%
+    {
+        transform: translateX(3.75rem) translateY(-1.875rem);
+    }
+
+    100%
+    {
+        transform: translateX(3.75rem) translateY(-7.5rem);
+    }
+}
+
+@keyframes bend_top
+{
+    15%
+    {
+        transform: rotateX(90deg) translateZ(7.5rem);
+    }
+
+    20%
+    {
+        transform: rotateX(90deg) translateZ(3.75rem);
+    }
+
+    40%
+    {
+        transform: rotateX(90deg) translateZ(7.5rem);
+    }
+
+    80%
+    {
+        transform: rotateX(90deg) translateZ(7.5rem);
+    }
+
+    90%
+    {
+        transform: rotateX(90deg) translateZ(1.875rem);
+    }
+
+    100%
+    {
+        transform: rotateX(90deg) translateZ(7.5rem);
+    }
+}
+
+@keyframes inner_ball_jump
+{
+    25%
+    {
+        transform: translateX(3.75rem) translateY(3.25rem);
+    }
+
+    40%
+    {
+        transform: translateX(3.75rem) translateY(0);
+    }
+
+    60%
+    {
+        transform: translateX(3.75rem) translateY(7.5rem);
+    }
+
+    80%
+    {
+        transform: translateX(3.75rem) translateY(0);
+    }
+
+    93%
+    {
+        transform: translateX(3.75rem) translateY(7.5rem);
+    }
+
+    96%
+    {
+        transform: translateX(3.75rem) translateY(5.625rem);
+    }
+
+    100%
+    {
+        transform: translateX(3.75rem) translateY(7.5rem);
+    }
+}
+
+@keyframes bend_bottom
+{
+    59%, 92%, 98%
+    {
+        transform: rotateX(-90deg) translateZ(7.5rem);
+    }
+
+    60%, 93%, 99%
+    {
+        transform: rotateX(-90deg) translateZ(7.7rem);
+    }
+}
